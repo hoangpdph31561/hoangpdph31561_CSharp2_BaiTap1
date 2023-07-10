@@ -21,7 +21,7 @@ namespace hoangpdph31561_CSharp2_BaiTap1
             do
             {
                 Bike xeDap = new Bike();
-                if(lstXeDaps.Any(x => x.Id == _genID))
+                while(lstXeDaps.Any(x => x.Id == _genID))
                 {
                     _genID++;
                 }
