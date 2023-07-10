@@ -9,6 +9,7 @@ namespace hoangpdph31561_CSharp2_BaiTap1
 {
     internal class Program
     {
+        public delegate void CheckDelegate<T> (T lst);
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.Unicode;
@@ -44,7 +45,8 @@ namespace hoangpdph31561_CSharp2_BaiTap1
                         Environment.Exit(0);
                         break;
                     case 1:
-                        sv.Nhap(lstXeDaps);
+                        CheckDelegate<List<Bike>> nhap = sv.Nhap;
+                        nhap(lstXeDaps);
                         break;
                     case 2:
                         sv.Xuat(lstXeDaps);
